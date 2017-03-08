@@ -19,7 +19,7 @@ class Dakik {
 
     $options = array("soap_version" => SOAP_1_1,  "trace" => 1, "exceptions" => false);
 
-    if(is_null($conf['username']) || is_null($conf['user_id']) || is_null($conf['password'])) {
+    if(!isset($conf['username']) || !isset($conf['user_id']) || !isset($conf['password'])) {
       throw new DakikException("Dakik Teslimat Ayarları Girilmedi");
     } else {
 
